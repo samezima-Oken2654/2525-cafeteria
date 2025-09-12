@@ -1,0 +1,382 @@
+/* 全体の設定 */
+body {
+    font-family: 'Kosugi Maru', sans-serif; /* 子供向けに丸いフォント */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe0b2; /* 暖かく明るい背景色 */
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #ff9800; /* 明るいオレンジ色 */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Mochiy Pop P One', cursive; /* 目立つタイトル用フォント */
+    font-size: 3em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* ロゴのサイズを調整 */
+    height: auto;
+    margin-right: 15px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* ナビゲーション */
+nav {
+    background-color: #ffb74d; /* ヘッダーより少し薄いオレンジ */
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px solid #f57c00;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* スマホでの折り返し */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f57c00;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* ヒーローセクション */
+#hero {
+    background-image: url('hero-image.jpg'); /* 背景画像を設定 */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* 高さの調整 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* オーバーレイで文字を見やすく */
+    border-radius: 15px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h2 {
+    font-family: 'Mochiy Pop P One', cursive;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 各セクション */
+.content-section,
+.Activity_Images_section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.content-section h2,
+.Activity_Images_section h2 {
+    font-family: 'Mochiy Pop P One', cursive;
+    font-size: 2.5em;
+    color: #f57c00;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.content-section h2::after,
+.Activity_Images_section h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 5px;
+    background-color: #ffb74d;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.big-text {
+    font-family: 'Mochiy Pop P One', cursive;
+    font-size: 1.8em;
+    color: #e65100;
+    margin: 15px 0;
+}
+
+.small-text {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.note-text {
+    font-size: 1.1em;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* アイコン */
+.section-icon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff9800;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 実際には背景画像としてアイコンを配置 */
+    background-image: url('icon-placeholder.png'); /* ここに各セクションのアイコン画像を配置 */
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* スケジュール情報 */
+.schedule-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 地図 */
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* リンク */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* フッター */
+footer {
+    background-color: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    #hero {
+        height: 300px;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+
+    .big-text {
+        font-size: 1.5em;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero {
+        height: 250px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.8em;
+    }
+
+    .big-text {
+        font-size: 1.2em;
+    }
+}
+
+.login-button {
+    background-color: #f57c00; /* ボタンの背景色 */
+    color: white; /* テキストの色 */
+    font-size: 1.2em; /* フォントサイズ */
+    font-weight: bold; /* フォントを太字に */
+    padding: 12px 24px; /* 上下左右のパディング */
+    border: none; /* 枠線をなくす */
+    border-radius: 25px; /* 角を丸くする */
+    cursor: pointer; /* マウスカーソルをポインターに */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影をつけて立体感を出す */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* ホバー時のアニメーション */
+    display: inline-block; /* インラインブロック要素として配置 */
+    margin: 15px 0; /* 上下のマージン */
+}
+
+.login-button:hover {
+    background-color: #e65100; /* ホバー時の背景色 */
+    transform: translateY(-2px); /* 少し上に移動させるアニメーション */
+}
+
+.login-button:active {
+    background-color: #d32f2f; /* クリック時の背景色 */
+    transform: translateY(0); /* 元の位置に戻す */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を小さくする */
+}

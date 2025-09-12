@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニコニコ夢食堂へようこそ！</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="./favicon.ico">
+
+    <script>
+window.onload = function() {
+    alert("このサイトは開発中のβ版です。内容が変更されることがありますので、ご了承ください。またバグがある可能性があります。見つけた場合は、スタッフまでお知らせください。(バグ報告連絡先：wakibiki.kinoshita@gmail.com)");
+};
+
+function loginPrompt() {
+    const id = prompt("IDを入力してください。");
+    const password = prompt("パスワードを入力してください。");
+
+    // ここに複数のIDとパスワードの組み合わせを設定
+    const users = {
+        "user1": "pass1",
+        "Admin": "admin-pass",
+    };
+
+    if (users[id] === password) {
+        window.location.href = "https://photos.app.goo.gl/Bvz1NMrN6s9CXYvP8";
+    } else {
+        alert("IDまたはパスワードが間違っています。スタッフまでお問い合わせください。");
+    }
+}
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="logo.png" alt="ニコニコ夢食堂" class="logo"> ニコニコ夢食堂</h1>
+            <p>みんなで楽しく、おいしいごはんを食べよう！</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">ニコニコ夢食堂って？</a></li>
+            <li><a href="#schedule">いつやってるの？</a></li>
+            <li><a href="#location">どこでやってるの？</a></li>
+            <li><a href="#contact">おといあわせ</a></li>
+            <li><a href="https://www.instagram.com/2525yume_kurobe/" target="_blank">インスタグラム</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h2>おいしいごはんが待ってるよ！</h2>
+                <p>みんなでワイワイ、楽しい時間を過ごそう！</p>
+            </div>
+
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="section-icon">
+
+            </div>
+            <h2>ニコニコ夢食堂ってどんなところ？</h2>
+            <p>ニコニコ夢食堂は、子どもたちが安心して、おいしいごはんを食べられる場所だよ！<br>
+                友だちや、お兄さん・お姉さんと一緒に、笑顔いっぱいの時間を過ごそうね。</p>
+            <p>ひとりでも、家族と一緒でも、大かんげい！<br>
+                みんなで食卓を囲んで、元気いっぱいの毎日を送ろう！</p>
+
+        </section>
+
+        <section id="schedule" class="content-section">
+            <div class="section-icon">
+
+            </div>
+            <h2>いつやってるの？</h2>
+            <div class="schedule-info">
+                <p class="big-text">毎週火曜日</p>
+                <p class="small-text">（祝日はお休みだよ）</p>
+                <p class="big-text">16時から19時まで</p>
+                <p class="note-text">※長期休み（夏休みなど）は14時からだよ！</p>
+            </div>
+
+        </section>
+
+        <section id="Activity_Image" class="Activity_Images_section">
+            <div class="section-icon">
+
+            </div>
+
+                <h2>活動の様子(保護者の皆様へ)</h2>
+                <div class="Activity_info">
+                    <p class="big-text">活動中の写真を公開しています。</p>
+                    <button onclick="loginPrompt()" class="login-button">閲覧はこちら</button>
+                    <p class="note-text">※閲覧にはID及びパスワードが必要です。スタッフにお問い合わせください。</p>
+                </div>
+        </section>
+
+        <section id="location" class="content-section">
+            <div class="section-icon">
+
+            </div>
+            <h2>どこでやってるの？</h2>
+            <p class="big-text">富山県黒部市天神新535-1</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1444.1780447061908!2d137.43934854725936!3d36.87269665774356!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff7af9a4ed31e1b%3A0x390403c545ebcb37!2z44OL44Kz44OL44Kz5aSi6aOf5aCC!5e1!3m2!1sja!2sjp!4v1757418939527!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p>みんなで地図を見て、遊びに来てね！</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="section-icon">
+
+            </div>
+            <h2>おといあわせ</h2>
+            <p>何か聞きたいことや、気になることがあったら、ここに連絡してね！</p>
+            <p class="big-text">メール：<a href="mailto:contact@nikoyume.kyoken.org">contact@nikoyume.kyoken.org</a></p>
+            <p>お気軽にどうぞ！</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>©YutoKinoshita-2025</p>
+        <p><a href="https://www.instagram.com/2525yume_kurobe/" target="_blank">プライバシーポリシー</a></p>
+
+    </footer>
+
+    <img src="https://via.placeholder.com/150x80?text=Logo" alt="ニコニコ夢食堂ロゴ" style="display:none;">
+    <img src="https://via.placeholder.com/60x60?text=Icon" alt="セクションアイコン" style="display:none;">
+</body>
+</html>
