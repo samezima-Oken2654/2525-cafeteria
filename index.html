@@ -12,23 +12,6 @@ window.onload = function() {
     alert("このサイトは開発中のβ版です。内容が変更されることがありますので、ご了承ください。またバグがある可能性があります。見つけた場合は、スタッフまでお知らせください。(バグ報告連絡先：wakibiki.kinoshita@gmail.com)");
 };
 
-function loginPrompt() {
-    const id = prompt("IDを入力してください。");
-    const password = prompt("パスワードを入力してください。");
-
-    // ここに複数のIDとパスワードの組み合わせを設定
-    const users = {
-        "user1": "pass1",
-        "Admin": "admin-pass",
-        "YZ.259": "mirakon.gumi32",
-    };
-
-    if (users[id] === password) {
-        window.location.href = "https://photos.app.goo.gl/Bvz1NMrN6s9CXYvP8";
-    } else {
-        alert("IDまたはパスワードが間違っています。スタッフまでお問い合わせください。");
-    }
-}
 </script>
 
 </head>
@@ -64,7 +47,7 @@ function loginPrompt() {
 
             </div>
             <h2>ニコニコ夢食堂ってどんなところ？</h2>
-            <p>ニコニコ夢食堂は、みんなが安心して、遊べておいしいごはんを食べられる場所だよ！<br>
+            <p>ニコニコ夢食堂は、子どもたちが安心して、おいしいごはんを食べられる場所だよ！<br>
                 友だちや、お兄さん・お姉さんと一緒に、笑顔いっぱいの時間を過ごそうね。</p>
             <p>ひとりでも、家族と一緒でも、大かんげい！<br>
                 みんなで食卓を囲んで、元気いっぱいの毎日を送ろう！</p>
@@ -93,7 +76,7 @@ function loginPrompt() {
                 <h2>活動の様子(保護者の皆様へ)</h2>
                 <div class="Activity_info">
                     <p class="big-text">活動中の写真を公開しています。</p>
-                    <button onclick="loginPrompt()" class="login-button">閲覧はこちら</button>
+                    <button onclick="window.location.href='https://samezima-oken2654.github.io/2525-cafeteria.Login/'" class="login-button">閲覧はこちら</button>
                     <p class="note-text">※閲覧にはID及びパスワードが必要です。スタッフにお問い合わせください。</p>
                 </div>
         </section>
@@ -123,12 +106,9 @@ function loginPrompt() {
 
     <footer>
         <p>©YutoKinoshita-2025</p>
-
     </footer>
 
     <img src="https://via.placeholder.com/150x80?text=Logo" alt="ニコニコ夢食堂ロゴ" style="display:none;">
     <img src="https://via.placeholder.com/60x60?text=Icon" alt="セクションアイコン" style="display:none;">
 </body>
-
 </html>
-
